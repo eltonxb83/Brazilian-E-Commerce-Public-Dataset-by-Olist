@@ -18,7 +18,7 @@ Go to: https://www.kaggle.com/settings
 ### Step 2: Scroll to "API" Section
 
 Click: ✅ **Create New API Token**
-Copy the API key and safe it to a safety place
+```Copy the API key and safe it to a safety place```
 ------------------------------------------------------------------------
 
 ## 3. Setup Kaggle API in Jupyter Notebook
