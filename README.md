@@ -71,7 +71,7 @@ __pycache__/
 ------------------------------------------------------------------------
 
 ## 5. Download Kaggle CSVs Using Python into data/
-Use the helper script download_kaggle.py to pull all 9 Olist CSVs and save them to the data/ folder.
+Use the helper script download_kaggle.py[https://github.com/pinghar/Brazilian-E-Commerce-Public-Dataset-by-Olist/blob/main/download_kaggle.py] to pull all 9 Olist CSVs and save them to the data/ folder.
 
 You can run it either from terminal:
 
