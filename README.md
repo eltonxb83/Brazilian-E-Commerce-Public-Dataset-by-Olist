@@ -32,8 +32,16 @@ Create `.env`:
 ```
 
 ``` env
-KAGGLE_USERNAME=your_kaggle_username
-KAGGLE_KEY=your_kaggle_api_key
+# Kaggle
+KAGGLE_USERNAME=xxxx
+KAGGLE_KEY=xxxx
+
+# GitHub (for tap-github / Dagster)
+GITHUB_TOKEN=xxxxx
+
+# BigQuery
+GCP_PROJECT_ID=xxxx
+GOOGLE_APPLICATION_CREDENTIALS=xxxxxx json file path
 ```
 
 ### Load in Jupyter:
