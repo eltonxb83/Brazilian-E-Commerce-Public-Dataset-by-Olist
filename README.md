@@ -1,175 +1,236 @@
-# Olist Kaggle → BigQuery with Meltano (plus Jupyter validation)
+# Kaggle → CSV → Meltano → BigQuery Pipeline (Step-by-Step Guide)
 
-This project demonstrates a full EL pipeline:
+This project demonstrates how to:
 
-Kaggle → Local CSV → Meltano → BigQuery → dbt (later)
-
-------------------------------------------------------------------------
-
-## 1. Project Structure
-
-    meltano_kaggle_olist/
-    ├── data/
-    ├── notebooks/
-    ├── .env
-    ├── .gitignore
-    ├── meltano.yml
-    ├── README.md
+✅ Generate Kaggle API credentials\
+✅ Download Kaggle datasets using Python\
+✅ Store raw CSV safely\
+✅ Load into BigQuery using Meltano\
+✅ Prepare for dbt transformations
 
 ------------------------------------------------------------------------
 
-## 2. Environment Setup
+## 1. Create a Git Repository
+
+In your project root:
 
 ``` bash
-conda env create -f your eltn file path
-conda activate eltn
-pip install meltano pandas python-dotenv jupyter kaggle
+git init
+git add .
+git commit -m "Initial Kaggle → BigQuery project"
 ```
 
 ------------------------------------------------------------------------
 
-## 3. Kaggle API Setup
+## 2. Generate Kaggle API Key
 
-Download kaggle.json from Kaggle → Account → API.
+### Step 1: Login to Kaggle
 
-``` bash
-mkdir -p ~/.kaggle
-mv kaggle.json ~/.kaggle/
-chmod 600 ~/.kaggle/kaggle.json
+Go to: https://www.kaggle.com/account
+
+### Step 2: Scroll to "API" Section
+
+Click: ✅ **Create New API Token**
+
+This downloads:
+
+    kaggle.json
+
+Contents example:
+
+``` json
+{
+  "username": "your_username",
+  "key": "your_api_key"
+}
 ```
 
 ------------------------------------------------------------------------
 
-## 4. .env File
+## 3. Setup Kaggle API in Jupyter Notebook
+
+### Option A (Recommended): Use `.env` file
+
+Create `.env`:
+
+``` bash
+nano .env
+```
 
 ``` env
 KAGGLE_USERNAME=your_kaggle_username
 KAGGLE_KEY=your_kaggle_api_key
+```
 
-GCP_PROJECT_ID=durable-ripsaw-477914-g0
-BIGQUERY_DATASET=ecommerce
-GOOGLE_APPLICATION_CREDENTIALS=/full/path/to/service_account.json
+### Load in Jupyter:
+
+``` python
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+print(os.getenv("KAGGLE_USERNAME"))
+print(os.getenv("KAGGLE_KEY"))
 ```
 
 ------------------------------------------------------------------------
 
-## 5. .gitignore
+## 4. Setup `.gitignore`
 
 ``` gitignore
 .env
 *.json
-__pycache__/
-.ipynb_checkpoints/
 .meltano/
-logs/
-state.*
+data/*.csv
+__pycache__/
 ```
+
+✅ Prevents leaking secrets
 
 ------------------------------------------------------------------------
 
-## 6. Jupyter Notebook 01 -- Download Kaggle Dataset
+## 5. Download Kaggle CSVs Using Python (Jupyter Notebook)
 
 ``` python
-from kaggle.api.kaggle_api_extended import KaggleApi
+import kagglehub
+from kagglehub import KaggleDatasetAdapter
 from pathlib import Path
 
-api = KaggleApi()
-api.authenticate()
+DATASET_SLUG = "olistbr/brazilian-ecommerce"
 
-data_dir = Path("../data")
+FILES = [
+    "olist_customers_dataset.csv",
+    "olist_geolocation_dataset.csv",
+    "olist_order_items_dataset.csv",
+    "olist_order_payments_dataset.csv",
+    "olist_order_reviews_dataset.csv",
+    "olist_orders_dataset.csv",
+    "olist_products_dataset.csv",
+    "olist_sellers_dataset.csv",
+    "product_category_name_translation.csv",
+]
+
+data_dir = Path("data")
 data_dir.mkdir(exist_ok=True)
 
-api.dataset_download_files(
-  "olistbr/brazilian-ecommerce",
-  path=str(data_dir),
-  unzip=True
-)
+for file in FILES:
+    df = kagglehub.load_dataset(
+        KaggleDatasetAdapter.PANDAS,
+        DATASET_SLUG,
+        file
+    )
+    output = data_dir / file
+    df.to_csv(output, index=False)
+    print(f"Saved {file} → {len(df)} rows")
 ```
 
 ------------------------------------------------------------------------
 
-## 7. Jupyter Notebook 02 -- CSV Row Count Validation
+## 6. Generate BigQuery Service Account JSON
 
-``` python
-import pandas as pd
-from pathlib import Path
+### Step 1: Google Cloud Console
 
-data_dir = Path("../data")
+https://console.cloud.google.com
 
-for f in data_dir.glob("*.csv"):
-    df = pd.read_csv(f)
-    print(f.name, len(df))
-```
+### Step 2: IAM & Admin → Service Accounts
 
-------------------------------------------------------------------------
+Create new account:
 
-## 8. Meltano Setup
+    Name: meltano-bq-loader
+    Role: BigQuery Admin
+
+### Step 3: Create Key → JSON
+
+Download file and store it safely:
 
 ``` bash
-meltano init .
+/home/youruser/project/bq-key.json
+```
+
+------------------------------------------------------------------------
+
+## 7. Setup BigQuery Credentials in Jupyter
+
+``` python
+import os
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/youruser/project/bq-key.json"
+```
+
+------------------------------------------------------------------------
+
+## 8. Initialize Meltano
+
+``` bash
+meltano init meltano_kaggle_csv
+cd meltano_kaggle_csv
+```
+
+------------------------------------------------------------------------
+
+## 9. Add CSV Extractor
+
+``` bash
 meltano add extractor tap-csv
+```
+
+------------------------------------------------------------------------
+
+## 10. Add BigQuery Loader
+
+``` bash
 meltano add loader target-bigquery
 ```
 
 ------------------------------------------------------------------------
 
-## 9. meltano.yml
+## 11. Configure `meltano.yml`
 
 ``` yaml
-version: 1
-default_environment: dev
-
 plugins:
   extractors:
-    - name: tap-csv
-      variant: meltanolabs
-      pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
-      config:
-        files:
-          - entity: olist_customers
-            path: data/olist_customers_dataset.csv
-            keys: ["customer_id"]
+  - name: tap-csv
+    variant: meltanolabs
+    config:
+      files:
+        - entity: olist_customers
+          path: data/olist_customers_dataset.csv
+          keys: ["customer_id"]
+```
 
+``` yaml
   loaders:
-    - name: target-bigquery
-      variant: z3z1ma
-      pip_url: git+https://github.com/z3z1ma/target-bigquery.git
-      config:
-        project: ${GCP_PROJECT_ID}
-        dataset: ${BIGQUERY_DATASET}
-        location: US
-        credentials_path: ${GOOGLE_APPLICATION_CREDENTIALS}
-        denormalized: true
-        flattening_enabled: true
-        flattening_max_depth: 1
-        upsert: false
-        overwrite: false
+  - name: target-bigquery
+    variant: z3z1ma
+    config:
+      project: your_project_id
+      dataset: ecommerce
+      location: US
+      method: batch_job
+      credentials_path: /full/path/bq-key.json
+      denormalized: true
+      flattening_enabled: true
+      flattening_max_depth: 1
 ```
 
 ------------------------------------------------------------------------
 
-## 10. Run the Pipeline
+## 12. Run the Pipeline
 
 ``` bash
-rm -f .meltano/state*
-meltano run tap-csv target-bigquery --force
+meltano run tap-csv target-bigquery
 ```
 
 ------------------------------------------------------------------------
 
-## 11. Jupyter Notebook 03 -- CSV vs BigQuery Validation
+## 13. Verify in BigQuery
 
-``` python
-from google.cloud import bigquery
-client = bigquery.Client()
-
-query = "SELECT COUNT(*) FROM `durable-ripsaw-477914-g0.ecommerce.olist_customers`"
-print(client.query(query).to_dataframe())
+``` sql
+SELECT COUNT(*) FROM ecommerce.olist_customers;
 ```
 
 ------------------------------------------------------------------------
 
-## ✅ Result
-
-All Kaggle CSV data is now safely loaded into BigQuery without
-deduplication. dbt transformations can be built on top.
+✅ Pipeline Complete\
+✅ dbt transformations come next\
+✅ Raw data fully preserved
