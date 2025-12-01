@@ -211,13 +211,14 @@ meltano run tap-csv target-bigquery
 ------------------------------------------------------------------------
 
 ## 12. Verify in BigQuery match with CSV
-Verify CSV Files Locally (Row & Column Counts) with [check_all_csvs.py](). 
+Verify CSV Files Locally (Row & Column Counts) with [check_all_csvs.py](https://github.com/pinghar/Brazilian-E-Commerce-Public-Dataset-by-Olist/blob/main/check_all_csvs.py). 
 
 Run from terminal:
 ``` bash
 python download_kaggle.py
 ```
 
+Then go to google console > big query run below sql
 
 ``` sql
 SELECT 
@@ -247,7 +248,7 @@ UNION ALL
 SELECT 
   'product_category_name_translation', COUNT(*) FROM ecommerce.product_category_name_translation;
 ```
-
+After that, match the csv file rows and columns vs bigquery rows and columns all should be same.
 ------------------------------------------------------------------------
 
 ✅ Pipeline Complete\
