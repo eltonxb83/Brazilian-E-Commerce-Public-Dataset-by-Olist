@@ -14,7 +14,7 @@ This project demonstrates how to:
 ### Step 1: 
 ```
 conda env create -f eltn file path
-
+conda activate eltn
 ```
 ------------------------------------------------------------------------
 ## 2. Generate Kaggle API Key
