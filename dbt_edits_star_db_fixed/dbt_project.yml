@@ -1,0 +1,24 @@
+name: dbt_edits_star_db
+version: 1.0.0
+config-version: 2
+
+profile: dbt_olist
+
+model-paths: ["staging", "marts"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  dbt_edits_star_db:
+
+    staging:
+      +materialized: view
+
+    marts:
+      dim:
+        +materialized: table
+      fact:
+        +materialized: table
+
+

@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: fact_db_order_items
+    description: "Fact table at order-item level, joining orders and products/sellers/customers."
+    columns:
+      - name: order_id
+        description: "Order ID this item belongs to."
+        tests:
+          - not_null
+
+      - name: order_item_id
+        description: "Line number within the order."
+        tests:
+          - not_null
+
+      - name: customer_id
+        description: "Customer placing the order."
+        tests:
+          - not_null
+
+      - name: product_id
+        description: "Product being sold."
+
+      - name: seller_id
+        description: "Seller fulfilling the order."
+
+      - name: order_date_key
+        description: "Order purchase date (YYYY-MM-DD)."
+
+      - name: price
+        description: "Item price."
+
+      - name: freight_value
+        description: "Freight cost allocated to this item."
+
+      - name: gross_order_item_value
+        description: "price + freight_value."
+

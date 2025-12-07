@@ -1,0 +1,24 @@
+version: 2
+models:
+  - name: dim_db_customers
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+
+  - name: dim_db_products
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+
+  - name: dim_db_sellers
+    columns:
+      - name: seller_id
+        tests: [unique, not_null]
+
+  - name: dim_db_dates
+    columns:
+      - name: date_key
+        tests: [unique, not_null]
+
+
+

@@ -1,0 +1,12 @@
+dbt_olist:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "durable-ripsaw-477914-g0"
+      dataset: "ecommerce"
+      location: US
+      threads: 4
+      priority: interactive
+      retries: 1
