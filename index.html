@@ -5,9 +5,6 @@
   <title>Brazilian E-Commerce Dashboard (BigQuery)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google API JS -->
-  <script src="https://apis.google.com/js/api.js"></script>
-
   <!-- Plotly for interactive charts -->
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 
@@ -86,6 +83,7 @@
     #signout-button {
       background: #eee;
       color: #333;
+      display: none;
     }
 
     #status {
@@ -166,14 +164,14 @@
     <header-top>
       <div>
         <h1>Brazilian E-Commerce Dashboard</h1>
-        <p>Live from BigQuery &mdash; Olist customer, seller, category, and sales metrics.</p>
+        <p>Live from BigQuery — Olist customer, seller, category, and sales metrics.</p>
       </div>
       <div id="auth">
         <button id="signin-button">Sign in with Google</button>
-        <button id="signout-button" style="display:none;">Sign out</button>
+        <button id="signout-button">Sign out</button>
       </div>
     </header-top>
-    <div id="status"><span>Loading Google API &hellip;</span></div>
+    <div id="status"><span>Loading Google API …</span></div>
   </header>
 
   <main>
@@ -236,19 +234,19 @@
           </div>
         </div>
         <div class="chart" style="padding:12px;font-size:13px;color:#666;">
-          You can duplicate the JS query pattern below to add:
-          average review scores, revenue by state, payment types, etc.
+          You can duplicate the JS query pattern below to add average review scores,
+          revenue by state, payment types, etc.
         </div>
       </article>
     </section>
   </main>
 
   <script>
-    /********** 1. EDIT THESE CONSTANTS FOR YOUR PROJECT **********/
+    /********** 1. PROJECT CONSTANTS **********/
     const CLIENT_ID  = "297911594147-9dbblho1k834h239f7g7tfhqtr6c1gvf.apps.googleusercontent.com";
     const API_KEY    = "AIzaSyDb4uWxi5LWSQXzFvf87cJtonj6zMzNCks";
     const PROJECT_ID = "durable-ripsaw-477914-g0";
-    const DATASET    = "ecommerce"; // e.g. "olist"
+    const DATASET    = "ecommerce";
     const SCOPES     = "https://www.googleapis.com/auth/bigquery.readonly";
 
     const DISCOVERY_DOCS = [
@@ -256,7 +254,7 @@
     ];
 
     /********** 2. SMALL HELPERS **********/
-    function setStatus(text, isError=false) {
+    function setStatus(text, isError = false) {
       const el = document.getElementById("status");
       el.className = isError ? "error" : "";
       el.innerHTML = `<span>${text}</span>`;
@@ -287,6 +285,7 @@
       const rows = await runQuery(sql);
       const labels = [];
       const values = [];
+
       rows.forEach(r => {
         labels.push(r.f[0].v);
         values.push(Number(r.f[1].v));
@@ -300,8 +299,8 @@
         textinfo: "label+value",
         hovertemplate: "State: %{label}<br>Customers: %{value}<extra></extra>"
       }], {
-        margin: {t:20,l:0,r:0,b:0}
-      }, {responsive:true});
+        margin: { t: 20, l: 0, r: 0, b: 0 }
+      }, { responsive: true });
     }
 
     async function chartSellerDistribution() {
@@ -315,6 +314,7 @@
       const rows = await runQuery(sql);
       const labels = [];
       const values = [];
+
       rows.forEach(r => {
         labels.push(r.f[0].v);
         values.push(Number(r.f[1].v));
@@ -328,8 +328,8 @@
         textinfo: "label+value",
         hovertemplate: "State: %{label}<br>Sellers: %{value}<extra></extra>"
       }], {
-        margin: {t:20,l:0,r:0,b:0}
-      }, {responsive:true});
+        margin: { t: 20, l: 0, r: 0, b: 0 }
+      }, { responsive: true });
     }
 
     async function chartTopSellers() {
@@ -346,6 +346,7 @@
       const ranks = [];
       const values = [];
       const labels = [];
+
       rows.forEach((r, i) => {
         ranks.push(i + 1);
         values.push(Number(r.f[1].v));
@@ -362,10 +363,10 @@
         hovertemplate:
           "Rank: %{x}<br>Seller ID: %{text}<br>Order items: %{y}<extra></extra>"
       }], {
-        margin: {t:20,l:40,r:10,b:40},
-        xaxis: {title:"Seller rank (1 = highest)"},
-        yaxis: {title:"Number of order items"}
-      }, {responsive:true});
+        margin: { t: 20, l: 40, r: 10, b: 40 },
+        xaxis: { title: "Seller rank (1 = highest)" },
+        yaxis: { title: "Number of order items" }
+      }, { responsive: true });
     }
 
     async function chartTopCategories() {
@@ -383,11 +384,14 @@
         LIMIT 50
       `;
       const rows = await runQuery(sql);
+
       let arr = rows.map(r => ({
         name: r.f[0].v || "Unknown",
         count: Number(r.f[1].v)
       }));
-      arr.sort((a,b) => a.count - b.count); // ascending for h-bar
+
+      // Sort ascending for prettier horizontal bar chart
+      arr.sort((a, b) => a.count - b.count);
 
       const names = arr.map(x => x.name);
       const values = arr.map(x => x.count);
@@ -399,9 +403,9 @@
         x: values,
         hovertemplate: "Category: %{y}<br>Order items: %{x}<extra></extra>"
       }], {
-        margin: {t:20,l:150,r:10,b:30},
-        xaxis: {title:"Count of order items"}
-      }, {responsive:true});
+        margin: { t: 20, l: 150, r: 10, b: 30 },
+        xaxis: { title: "Count of order items" }
+      }, { responsive: true });
     }
 
     async function chartSalesPerMonth() {
@@ -416,6 +420,7 @@
       const rows = await runQuery(sql);
       const months = [];
       const counts = [];
+
       rows.forEach(r => {
         months.push(r.f[0].v);
         counts.push(Number(r.f[1].v));
@@ -428,14 +433,14 @@
         y: counts,
         hovertemplate: "Month: %{x}<br>Orders: %{y}<extra></extra>"
       }], {
-        margin: {t:20,l:40,r:10,b:40},
-        xaxis: {title:"Month (YYYY-MM)"},
-        yaxis: {title:"Number of orders"}
-      }, {responsive:true});
+        margin: { t: 20, l: 40, r: 10, b: 40 },
+        xaxis: { title: "Month (YYYY-MM)" },
+        yaxis: { title: "Number of orders" }
+      }, { responsive: true });
     }
 
     async function renderAllCharts() {
-      setStatus("Running BigQuery SQL & rendering charts &hellip;");
+      setStatus("Running BigQuery SQL & rendering charts …");
       await Promise.all([
         chartCustomerDistribution(),
         chartSellerDistribution(),
@@ -466,10 +471,10 @@
               signOutBtn.style.display = "inline-block";
               const user = auth.currentUser.get();
               const email = user.getBasicProfile().getEmail();
-              setStatus(`Signed in as ${email}. Loading charts &hellip;`);
+              setStatus(`Signed in as ${email}. Loading charts …`);
               renderAllCharts().catch(err => {
-                console.error(err);
-                setStatus("Error running queries. Check console.", true);
+                console.error("Error running queries:", err);
+                setStatus("Error running queries. Check browser console.", true);
               });
             } else {
               signInBtn.style.display = "inline-block";
@@ -485,25 +490,21 @@
           signOutBtn.onclick = () => auth.signOut();
         })
         .catch(err => {
-          console.error(err);
-          setStatus("Error initializing Google client. Check API key / client ID.", true);
+          console.error("gapi.client.init error:", err);
+          const msg =
+            (err && (err.details || err.error || err.message)) ||
+            JSON.stringify(err);
+          setStatus("Error initializing Google client: " + msg, true);
         });
     }
 
     function gapiLoaded() {
-      setStatus("Initializing Google client &hellip;");
+      setStatus("Initializing Google client …");
       gapi.load("client:auth2", initClient);
     }
-
-    // Kick off when script loads
-    window.addEventListener("load", () => {
-      if (typeof gapi !== "undefined") {
-        gapiLoaded();
-      } else {
-        setStatus("Failed to load Google API JS.", true);
-      }
-    });
   </script>
+
+  <!-- Google API JS (calls gapiLoaded when ready) -->
+  <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
 </body>
 </html>
-
