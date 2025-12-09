@@ -80,7 +80,7 @@ python GX/GX_Validation_Report.py
 python ml/EDA_ML_Analysis.py
 
 ## 10. Dashboard
-[View Live Dashboard](https://your-dashboard-link.com)
+[View Live Dashboard](https://pinghar.github.io/Brazilian-E-Commerce-Public-Dataset-by-Olist/).
 
 ## 11. Dagster Orchestration
 dagster dev → open http://localhost:3000 to run full pipeline.
