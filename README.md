@@ -97,5 +97,13 @@ GX/uncommitted/<br>
 ### 4. launch dagster dashboard under your project root folder
 ```dagster dev -m dagster_proj.definitions```
 
-## 12. Full Presentation Slide for (Technical & CEO)
-[slides/Executive_Presentation.pdf](https://onedrive.live.com/?id=CFD7CE77852C3404%21sad5e240118a4479bb4572fd891148ea6&cid=CFD7CE77852C3404&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy9jZmQ3Y2U3Nzg1MmMzNDA0L0lRQUJKRjZ0cEJpYlI3UlhMOWlSRkk2bUFaS3ozMWY2UzByLVNaY0k3S3BONmNZP2U9WFVuN1VI&parId=CFD7CE77852C3404%21s125e47f6609c4140ba0827ee87ac0566&o=OneUp).
+## 12. Executive & Technical Presentation
+
+This project includes a complete executive-ready presentation deck covering:
+- Business value
+- Technical architecture
+- Data quality & governance
+- Key insights and recommendations
+
+📎 **Full Slide Deck (PDF):**  
+[Full_Presentation_Slide.pdf](https://onedrive.live.com/?id=CFD7CE77852C3404%21sad5e240118a4479bb4572fd891148ea6&cid=CFD7CE77852C3404&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy9jZmQ3Y2U3Nzg1MmMzNDA0L0lRQUJKRjZ0cEJpYlI3UlhMOWlSRkk2bUFaS3ozMWY2UzByLVNaY0k3S3BONmNZP2U9WFVuN1VI&parId=CFD7CE77852C3404%21s125e47f6609c4140ba0827ee87ac0566&o=OneUp).
