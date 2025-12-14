@@ -1,0 +1,63 @@
+[32m2025-12-14 11:31:43 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - 16475 - LOGS_CAPTURED - Started capturing logs in process (pid: 16475).
+[32m2025-12-14 11:31:43 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - 16475 - GX_Validation - STEP_START - Started execution of step "GX_Validation".
+[32m2025-12-14 11:31:43 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - 🔍 [GX] Running checkpoint 'Data quality Validation'...
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - Great Expectations Version: 1.9.1
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - 🔄 FULL MODE: Setting up expectations and running validation...
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - 🔧 SETUP MODE: Defining expectations...
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - ✅ Expectations defined and saved!
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - 🔍 Running multi-asset validation via Checkpoint...
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - ============================================================
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - MULTI-ASSET VALIDATION RESULTS
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - ============================================================
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - Overall Success: True
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - Number of assets validated: 4
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - 📊 Asset 1: bq_ds-fact_db_order_items
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    Suite: fact_db_order_items_validation
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    Total Expectations: 7
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    ✅ Passed: 7
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    ❌ Failed: 0
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - 📊 Asset 2: bq_ds-dim_db_customers
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    Suite: dim_db_customers_validation
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    Total Expectations: 2
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    ✅ Passed: 2
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    ❌ Failed: 0
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - 📊 Asset 3: bq_ds-dim_db_sellers
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    Suite: dim_db_sellers_validation
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    Total Expectations: 2
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    ✅ Passed: 2
+[32m2025-12-14 11:32:10 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    ❌ Failed: 0
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - 📊 Asset 4: bq_ds-dim_db_products
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    Suite: dim_db_products_validation
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    Total Expectations: 1
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    ✅ Passed: 1
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    ❌ Failed: 0
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - ✅ Checkpoint completed with run_name: validation_run_20251214_113154
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    Overall Success: True
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - ============================================================
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - GX HTML REPORT LOCATION
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - ============================================================
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - Main Index: /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/gx/uncommitted/data_docs/local_site/index.html
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - 💡 The HTML report includes validation results for ALL 3 assets!
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation -    Navigate to 'Validation Results' > 'validation_run_20251214_113154' to see all results.
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - ============================================================
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - Open the index.html file in your browser to view the interactive report!
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - Detected Windows/WSL. Using 'cmd.exe start' with UNC path.
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - ✅ Successfully launched report in external browser via UNC path: \\wsl.localhost\Ubuntu\home\pingh\Brazilian-E-Commerce-Public-Dataset-by-Olist\gx\uncommitted\data_docs\local_site\index.html
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - ✅ [GX] Data quality validation passed.
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - 16475 - GX_Validation - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - GX_Validation - Writing file at: /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/.tmp_dagster_home_l174yq_9/storage/810c0e9d-6194-453c-b42d-c9e2d33f4008/GX_Validation/result using PickledObjectFilesystemIOManager...
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - 16475 - GX_Validation - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-12-14 11:32:11 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - 810c0e9d-6194-453c-b42d-c9e2d33f4008 - 16475 - GX_Validation - STEP_SUCCESS - Finished execution of step "GX_Validation" in 27.53s.

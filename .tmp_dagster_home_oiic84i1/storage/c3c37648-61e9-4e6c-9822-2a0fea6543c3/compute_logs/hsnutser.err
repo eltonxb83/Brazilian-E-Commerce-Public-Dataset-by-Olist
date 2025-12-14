@@ -1,0 +1,18 @@
+[32m2025-12-13 13:21:03 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - 4427 - LOGS_CAPTURED - Started capturing logs in process (pid: 4427).
+[32m2025-12-13 13:21:03 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - 4427 - DBT_STG_Test - STEP_START - Started execution of step "DBT_STG_Test".
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - [0m05:21:07  Running with dbt=1.9.6
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - [0m05:21:09  Registered adapter: bigquery=1.9.1
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - [0m05:21:09  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - There are 3 unused configuration paths:
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - - models.dbt_edits_star_db.marts.dim
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - - models.dbt_edits_star_db.marts.fact
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - - models.dbt_edits_star_db.staging
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - [0m05:21:10  Found 12 models, 11 data tests, 9 sources, 492 macros
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - [0m05:21:10  Nothing to do. Try checking your model configs and model specification args
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - ▶ Testing dbt staging models: stg_db_* ...
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - ✅ dbt test (staging) completed successfully.
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mINFO[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - ✅ [dbt] Staging tables tested successfully.
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - 4427 - DBT_STG_Test - STEP_OUTPUT - Yielded output "result" of type "String". (Type check passed).
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - DBT_STG_Test - Writing file at: /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/.tmp_dagster_home_oiic84i1/storage/c3c37648-61e9-4e6c-9822-2a0fea6543c3/DBT_STG_Test/result using PickledObjectFilesystemIOManager...
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - 4427 - DBT_STG_Test - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-12-13 13:21:12 +0800[0m - dagster - [34mDEBUG[0m - ELT_Pipeline_Job - c3c37648-61e9-4e6c-9822-2a0fea6543c3 - 4427 - DBT_STG_Test - STEP_SUCCESS - Finished execution of step "DBT_STG_Test" in 8.66s.
