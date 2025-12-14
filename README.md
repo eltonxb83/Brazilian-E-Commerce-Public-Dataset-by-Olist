@@ -24,7 +24,7 @@ Clone repo:<br>
 ```git clone https://github.com/pinghar/Brazilian-E-Commerce-Public-Dataset-by-Olist.git```<br>
 ```cd Brazilian-E-Commerce-Public-Dataset-by-Olist```
 
-Create environment:
+Create environment:<br>
 ```conda env create -f eltn_environment.yml```<br>
 ```conda activate eltn```
 
