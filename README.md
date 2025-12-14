@@ -29,12 +29,12 @@ Create environment:<br>
 ```conda activate eltn```
 
 ## 4. Configure .env
-KAGGLE_USERNAME="your_kaggle_username"
-KAGGLE_KEY="your_kaggle_api_key"
-GITHUB_TOKEN="ghp-xxxx"
-GCP_PROJECT_ID="your_gcp_project_id"
-GOOGLE_APPLICATION_CREDENTIALS="/full/path/to/your-service-account.json"
-WEB_CLIENT_ID="your_google_client_id"
+KAGGLE_USERNAME="your_kaggle_username"<br>
+KAGGLE_KEY="your_kaggle_api_key"<br>
+GITHUB_TOKEN="ghp-xxxx"<br>
+GCP_PROJECT_ID="your_gcp_project_id"<br>
+GOOGLE_APPLICATION_CREDENTIALS="/full/path/to/your-service-account.json"<br>
+WEB_CLIENT_ID="your_google_client_id"<br>
 
 ## 5. .gitignore
 .env
