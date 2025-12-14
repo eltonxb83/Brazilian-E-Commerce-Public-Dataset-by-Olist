@@ -1,6 +1,6 @@
 
 # Brazilian E-Commerce (Olist) – End-to-End Analytics & ML Platform
-
+![Dashboard Flowchart](https://github.com/pinghar/Brazilian-E-Commerce-Public-Dataset-by-Olist/blob/main/FlowChart.png)
 **From EDA → Machine Learning → Dashboard → Executive Presentation**  
 Built on a production-grade data pipeline orchestrated with **Dagster**
 
