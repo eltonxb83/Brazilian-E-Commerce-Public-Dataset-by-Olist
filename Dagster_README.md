@@ -1,4 +1,4 @@
-## For who execute Dagster for the firs time
+## For who execute Dagster for the first time
 
 
 ## 1. go to your project root folder
