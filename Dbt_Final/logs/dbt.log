@@ -6887,3 +6887,1139 @@ having count(*) > 1
 [0m11:31:38.553974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7873f9a7eda0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78735d514430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78735d5148b0>]}
 [0m11:31:38.554556 [debug] [MainThread]: Flushing usage events
 [0m11:31:39.612160 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:54:35.287057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb9c2edab0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb9b435f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb9b434400>]}
+
+
+============================== 11:54:35.292082 | 8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a ==============================
+[0m11:54:35.292082 [info ] [MainThread]: Running with dbt=1.9.6
+[0m11:54:35.293147 [debug] [MainThread]: running dbt with arguments {'log_path': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/logs', 'fail_fast': 'False', 'static_parser': 'True', 'log_format': 'default', 'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'debug': 'False', 'log_cache_events': 'False', 'empty': 'False', 'use_colors': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'invocation_command': 'dbt run --select stg_db_*', 'cache_selected_only': 'False', 'no_print': 'None', 'partial_parse': 'True', 'profiles_dir': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final', 'version_check': 'True'}
+[0m11:54:38.427191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb00e1dae0>]}
+[0m11:54:38.573060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb00ef7790>]}
+[0m11:54:38.574601 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:54:38.815503 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m11:54:39.027495 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:54:39.028227 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:54:39.036061 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_edits_star_db.marts.dim
+- models.dbt_edits_star_db.staging
+- models.dbt_edits_star_db.marts.fact
+[0m11:54:39.087364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb007681c0>]}
+[0m11:54:39.198966 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:54:39.201560 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:54:39.229292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb0076a590>]}
+[0m11:54:39.230081 [info ] [MainThread]: Found 12 models, 11 data tests, 9 sources, 492 macros
+[0m11:54:39.230618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb007a0c40>]}
+[0m11:54:39.232876 [info ] [MainThread]: 
+[0m11:54:39.233380 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:54:39.233810 [info ] [MainThread]: 
+[0m11:54:39.234596 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:54:39.240777 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_durable-ripsaw-477914-g0'
+[0m11:54:39.241540 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:54:39.766290 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_durable-ripsaw-477914-g0, now list_durable-ripsaw-477914-g0_ecommerce)
+[0m11:54:39.766946 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:54:40.116455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb9b457c10>]}
+[0m11:54:40.117448 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:54:40.123454 [debug] [Thread-1 (]: Began running node model.dbt_edits_star_db.stg_db_customers
+[0m11:54:40.124448 [debug] [Thread-2 (]: Began running node model.dbt_edits_star_db.stg_db_order_items
+[0m11:54:40.125369 [debug] [Thread-3 (]: Began running node model.dbt_edits_star_db.stg_db_order_payments
+[0m11:54:40.126738 [debug] [Thread-4 (]: Began running node model.dbt_edits_star_db.stg_db_orders
+[0m11:54:40.126173 [info ] [Thread-1 (]: 1 of 7 START sql view model ecommerce.stg_db_customers ......................... [RUN]
+[0m11:54:40.127852 [info ] [Thread-2 (]: 2 of 7 START sql view model ecommerce.stg_db_order_items ....................... [RUN]
+[0m11:54:40.128854 [info ] [Thread-3 (]: 3 of 7 START sql view model ecommerce.stg_db_order_payments .................... [RUN]
+[0m11:54:40.129674 [info ] [Thread-4 (]: 4 of 7 START sql view model ecommerce.stg_db_orders ............................ [RUN]
+[0m11:54:40.130636 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_durable-ripsaw-477914-g0_ecommerce, now model.dbt_edits_star_db.stg_db_customers)
+[0m11:54:40.132046 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.dbt_edits_star_db.stg_db_order_items'
+[0m11:54:40.133315 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.dbt_edits_star_db.stg_db_order_payments'
+[0m11:54:40.134949 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.dbt_edits_star_db.stg_db_orders'
+[0m11:54:40.136010 [debug] [Thread-1 (]: Began compiling node model.dbt_edits_star_db.stg_db_customers
+[0m11:54:40.137006 [debug] [Thread-2 (]: Began compiling node model.dbt_edits_star_db.stg_db_order_items
+[0m11:54:40.137770 [debug] [Thread-3 (]: Began compiling node model.dbt_edits_star_db.stg_db_order_payments
+[0m11:54:40.138566 [debug] [Thread-4 (]: Began compiling node model.dbt_edits_star_db.stg_db_orders
+[0m11:54:40.157488 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_edits_star_db.stg_db_customers"
+[0m11:54:40.165190 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_edits_star_db.stg_db_order_items"
+[0m11:54:40.173904 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_edits_star_db.stg_db_order_payments"
+[0m11:54:40.180460 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_edits_star_db.stg_db_orders"
+[0m11:54:40.182349 [debug] [Thread-1 (]: Began executing node model.dbt_edits_star_db.stg_db_customers
+[0m11:54:40.183030 [debug] [Thread-2 (]: Began executing node model.dbt_edits_star_db.stg_db_order_items
+[0m11:54:40.222890 [debug] [Thread-4 (]: Began executing node model.dbt_edits_star_db.stg_db_orders
+[0m11:54:40.224303 [debug] [Thread-3 (]: Began executing node model.dbt_edits_star_db.stg_db_order_payments
+[0m11:54:40.286350 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_edits_star_db.stg_db_orders"
+[0m11:54:40.289758 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_edits_star_db.stg_db_customers"
+[0m11:54:40.292453 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_edits_star_db.stg_db_order_items"
+[0m11:54:40.299810 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_edits_star_db.stg_db_order_payments"
+[0m11:54:40.302413 [debug] [Thread-4 (]: On model.dbt_edits_star_db.stg_db_orders: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.stg_db_orders"} */
+
+
+  create or replace view `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_orders`
+  OPTIONS()
+  as 
+
+select
+  order_id,
+  customer_id,
+  order_status,
+  safe_cast(order_purchase_timestamp as timestamp)    as order_purchase_timestamp,
+  safe_cast(order_approved_at as timestamp)           as order_approved_at,
+  safe_cast(order_delivered_carrier_date as timestamp) as order_delivered_carrier_date,
+  safe_cast(order_delivered_customer_date as timestamp) as order_delivered_customer_date,
+  safe_cast(order_estimated_delivery_date as timestamp) as order_estimated_delivery_date
+from `durable-ripsaw-477914-g0`.`ecommerce`.`olist_orders`;
+
+
+[0m11:54:40.303229 [debug] [Thread-1 (]: On model.dbt_edits_star_db.stg_db_customers: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.stg_db_customers"} */
+
+
+  create or replace view `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_customers`
+  OPTIONS()
+  as 
+
+select
+  customer_id,
+  customer_unique_id,
+  customer_zip_code_prefix,
+  customer_city,
+  customer_state
+from `durable-ripsaw-477914-g0`.`ecommerce`.`olist_customers`;
+
+
+[0m11:54:40.304623 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:54:40.305477 [debug] [Thread-2 (]: On model.dbt_edits_star_db.stg_db_order_items: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.stg_db_order_items"} */
+
+
+  create or replace view `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_order_items`
+  OPTIONS()
+  as 
+
+select
+  order_id,
+  order_item_id,
+  product_id,
+  seller_id,
+  safe_cast(price as numeric)         as price,
+  safe_cast(freight_value as numeric) as freight_value
+from `durable-ripsaw-477914-g0`.`ecommerce`.`olist_order_items`;
+
+
+[0m11:54:40.306183 [debug] [Thread-3 (]: On model.dbt_edits_star_db.stg_db_order_payments: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.stg_db_order_payments"} */
+
+
+  create or replace view `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_order_payments`
+  OPTIONS()
+  as 
+
+select
+  order_id,
+  payment_sequential,
+  payment_type,
+  safe_cast(payment_installments as int64) as payment_installments,
+  safe_cast(payment_value as numeric)      as payment_value
+from `durable-ripsaw-477914-g0`.`ecommerce`.`olist_order_payments`;
+
+
+[0m11:54:40.307032 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:54:40.308895 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:54:40.310015 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:54:40.855960 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:2a4250ed-8b42-4db7-b339-b36e3daaa354&page=queryresults
+[0m11:54:40.860030 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:f7c51f43-b4d5-404a-adf8-3b927e55e669&page=queryresults
+[0m11:54:40.862288 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:edd7de76-134e-43e0-bc1e-747bbc7ba3eb&page=queryresults
+[0m11:54:40.865527 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:8aca681e-fdb5-4682-9002-6a50134135df&page=queryresults
+[0m11:54:41.518790 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb0091fb80>]}
+[0m11:54:41.519436 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb00a04b20>]}
+[0m11:54:41.519915 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb0091dc30>]}
+[0m11:54:41.521303 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb0091db70>]}
+[0m11:54:41.520863 [info ] [Thread-2 (]: 2 of 7 OK created sql view model ecommerce.stg_db_order_items .................. [[32mCREATE VIEW (0 processed)[0m in 1.38s]
+[0m11:54:41.522385 [info ] [Thread-1 (]: 1 of 7 OK created sql view model ecommerce.stg_db_customers .................... [[32mCREATE VIEW (0 processed)[0m in 1.38s]
+[0m11:54:41.523315 [info ] [Thread-3 (]: 3 of 7 OK created sql view model ecommerce.stg_db_order_payments ............... [[32mCREATE VIEW (0 processed)[0m in 1.38s]
+[0m11:54:41.524423 [info ] [Thread-4 (]: 4 of 7 OK created sql view model ecommerce.stg_db_orders ....................... [[32mCREATE VIEW (0 processed)[0m in 1.38s]
+[0m11:54:41.525412 [debug] [Thread-2 (]: Finished running node model.dbt_edits_star_db.stg_db_order_items
+[0m11:54:41.526224 [debug] [Thread-1 (]: Finished running node model.dbt_edits_star_db.stg_db_customers
+[0m11:54:41.527105 [debug] [Thread-3 (]: Finished running node model.dbt_edits_star_db.stg_db_order_payments
+[0m11:54:41.527907 [debug] [Thread-4 (]: Finished running node model.dbt_edits_star_db.stg_db_orders
+[0m11:54:41.528592 [debug] [Thread-2 (]: Began running node model.dbt_edits_star_db.stg_db_product_category_name_translation
+[0m11:54:41.529443 [debug] [Thread-1 (]: Began running node model.dbt_edits_star_db.stg_db_products
+[0m11:54:41.530244 [debug] [Thread-3 (]: Began running node model.dbt_edits_star_db.stg_db_sellers
+[0m11:54:41.531266 [info ] [Thread-2 (]: 5 of 7 START sql view model ecommerce.stg_db_product_category_name_translation . [RUN]
+[0m11:54:41.532100 [info ] [Thread-1 (]: 6 of 7 START sql view model ecommerce.stg_db_products .......................... [RUN]
+[0m11:54:41.532804 [info ] [Thread-3 (]: 7 of 7 START sql view model ecommerce.stg_db_sellers ........................... [RUN]
+[0m11:54:41.533717 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_edits_star_db.stg_db_order_items, now model.dbt_edits_star_db.stg_db_product_category_name_translation)
+[0m11:54:41.534589 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_edits_star_db.stg_db_customers, now model.dbt_edits_star_db.stg_db_products)
+[0m11:54:41.535241 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_edits_star_db.stg_db_order_payments, now model.dbt_edits_star_db.stg_db_sellers)
+[0m11:54:41.535951 [debug] [Thread-2 (]: Began compiling node model.dbt_edits_star_db.stg_db_product_category_name_translation
+[0m11:54:41.536587 [debug] [Thread-1 (]: Began compiling node model.dbt_edits_star_db.stg_db_products
+[0m11:54:41.537127 [debug] [Thread-3 (]: Began compiling node model.dbt_edits_star_db.stg_db_sellers
+[0m11:54:41.541339 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_edits_star_db.stg_db_product_category_name_translation"
+[0m11:54:41.546060 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_edits_star_db.stg_db_products"
+[0m11:54:41.551853 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_edits_star_db.stg_db_sellers"
+[0m11:54:41.553437 [debug] [Thread-1 (]: Began executing node model.dbt_edits_star_db.stg_db_products
+[0m11:54:41.554261 [debug] [Thread-3 (]: Began executing node model.dbt_edits_star_db.stg_db_sellers
+[0m11:54:41.558558 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_edits_star_db.stg_db_products"
+[0m11:54:41.562742 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_edits_star_db.stg_db_sellers"
+[0m11:54:41.563412 [debug] [Thread-2 (]: Began executing node model.dbt_edits_star_db.stg_db_product_category_name_translation
+[0m11:54:41.568703 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_edits_star_db.stg_db_product_category_name_translation"
+[0m11:54:41.569442 [debug] [Thread-1 (]: On model.dbt_edits_star_db.stg_db_products: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.stg_db_products"} */
+
+
+  create or replace view `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_products`
+  OPTIONS()
+  as 
+
+select
+  product_id,
+  product_category_name,
+  product_weight_g,
+  product_length_cm,
+  product_height_cm,
+  product_width_cm
+from `durable-ripsaw-477914-g0`.`ecommerce`.`olist_products`;
+
+
+[0m11:54:41.570211 [debug] [Thread-3 (]: On model.dbt_edits_star_db.stg_db_sellers: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.stg_db_sellers"} */
+
+
+  create or replace view `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_sellers`
+  OPTIONS()
+  as 
+
+select
+  seller_id,
+  seller_zip_code_prefix,
+  seller_city,
+  seller_state
+from `durable-ripsaw-477914-g0`.`ecommerce`.`olist_sellers`;
+
+
+[0m11:54:41.570902 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:54:41.571650 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:54:41.572366 [debug] [Thread-2 (]: On model.dbt_edits_star_db.stg_db_product_category_name_translation: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.stg_db_product_category_name_translation"} */
+
+
+  create or replace view `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_product_category_name_translation`
+  OPTIONS()
+  as 
+
+select
+  product_category_name,
+  product_category_name_english
+from `durable-ripsaw-477914-g0`.`ecommerce`.`product_category_name_translation`;
+
+
+[0m11:54:41.577040 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:54:42.086616 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:e8edba32-c249-4634-be2d-1e8835f19b8a&page=queryresults
+[0m11:54:42.091554 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:d89d866a-26e0-46ea-b7df-1b9a7099a587&page=queryresults
+[0m11:54:42.098048 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:e7220e0e-757c-458f-9bf2-8e39fbc8aa26&page=queryresults
+[0m11:54:42.636321 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fafc9e3730>]}
+[0m11:54:42.637375 [info ] [Thread-3 (]: 7 of 7 OK created sql view model ecommerce.stg_db_sellers ...................... [[32mCREATE VIEW (0 processed)[0m in 1.10s]
+[0m11:54:42.638175 [debug] [Thread-3 (]: Finished running node model.dbt_edits_star_db.stg_db_sellers
+[0m11:54:42.649211 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb9c58f370>]}
+[0m11:54:42.650062 [info ] [Thread-2 (]: 5 of 7 OK created sql view model ecommerce.stg_db_product_category_name_translation  [[32mCREATE VIEW (0 processed)[0m in 1.12s]
+[0m11:54:42.650894 [debug] [Thread-2 (]: Finished running node model.dbt_edits_star_db.stg_db_product_category_name_translation
+[0m11:54:42.670319 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e014cd9-2ef1-4bd0-a663-1df5dd8e1b2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fafc9e2680>]}
+[0m11:54:42.671096 [info ] [Thread-1 (]: 6 of 7 OK created sql view model ecommerce.stg_db_products ..................... [[32mCREATE VIEW (0 processed)[0m in 1.14s]
+[0m11:54:42.671754 [debug] [Thread-1 (]: Finished running node model.dbt_edits_star_db.stg_db_products
+[0m11:54:42.673782 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:54:42.674948 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:54:42.675428 [debug] [MainThread]: Connection 'model.dbt_edits_star_db.stg_db_products' was properly closed.
+[0m11:54:42.675911 [debug] [MainThread]: Connection 'model.dbt_edits_star_db.stg_db_product_category_name_translation' was properly closed.
+[0m11:54:42.676235 [debug] [MainThread]: Connection 'model.dbt_edits_star_db.stg_db_sellers' was properly closed.
+[0m11:54:42.676568 [debug] [MainThread]: Connection 'model.dbt_edits_star_db.stg_db_orders' was properly closed.
+[0m11:54:42.677010 [info ] [MainThread]: 
+[0m11:54:42.677447 [info ] [MainThread]: Finished running 7 view models in 0 hours 0 minutes and 3.44 seconds (3.44s).
+[0m11:54:42.678951 [debug] [MainThread]: Command end result
+[0m11:54:42.710554 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:54:42.712676 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:54:42.720292 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/run_results.json
+[0m11:54:42.720916 [info ] [MainThread]: 
+[0m11:54:42.721403 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:54:42.721821 [info ] [MainThread]: 
+[0m11:54:42.722237 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m11:54:42.722918 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.525801, "process_in_blocks": "227624", "process_kernel_time": 1.088114, "process_mem_max_rss": "267388", "process_out_blocks": "2456", "process_user_time": 8.473738}
+[0m11:54:42.723489 [debug] [MainThread]: Command `dbt run` succeeded at 11:54:42.723372 after 7.53 seconds
+[0m11:54:42.724103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb9c2edab0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fb9c1c87c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71fafc937be0>]}
+[0m11:54:42.724623 [debug] [MainThread]: Flushing usage events
+[0m11:54:44.229472 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:54:51.327511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7161ef7b1ea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7161ee96dba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7161ee96dd50>]}
+
+
+============================== 11:54:51.331342 | 5dcaff24-b3a4-4f0a-97fa-abfd06edb5fa ==============================
+[0m11:54:51.331342 [info ] [MainThread]: Running with dbt=1.9.6
+[0m11:54:51.332191 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'log_path': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/logs', 'debug': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt test --select stg_db_*', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'warn_error': 'None', 'introspect': 'True', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'empty': 'None', 'target_path': 'None', 'profiles_dir': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final', 'version_check': 'True', 'partial_parse': 'True', 'fail_fast': 'False', 'write_json': 'True'}
+[0m11:54:53.201666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5dcaff24-b3a4-4f0a-97fa-abfd06edb5fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71615850ad40>]}
+[0m11:54:53.292994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5dcaff24-b3a4-4f0a-97fa-abfd06edb5fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716158361d50>]}
+[0m11:54:53.294342 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:54:53.511701 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m11:54:53.685893 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:54:53.686512 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:54:53.693910 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_edits_star_db.marts.dim
+- models.dbt_edits_star_db.staging
+- models.dbt_edits_star_db.marts.fact
+[0m11:54:53.747713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5dcaff24-b3a4-4f0a-97fa-abfd06edb5fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716153e9fe20>]}
+[0m11:54:53.867677 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:54:53.870094 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:54:53.902187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5dcaff24-b3a4-4f0a-97fa-abfd06edb5fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716153f11030>]}
+[0m11:54:53.903219 [info ] [MainThread]: Found 12 models, 11 data tests, 9 sources, 492 macros
+[0m11:54:53.903885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5dcaff24-b3a4-4f0a-97fa-abfd06edb5fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7161587e80a0>]}
+[0m11:54:53.906508 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:54:53.910152 [debug] [MainThread]: Command end result
+[0m11:54:53.951303 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:54:53.953681 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:54:53.958499 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/run_results.json
+[0m11:54:53.959421 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.7269003, "process_in_blocks": "584", "process_kernel_time": 0.651179, "process_mem_max_rss": "258856", "process_out_blocks": "2288", "process_user_time": 7.524736}
+[0m11:54:53.960320 [debug] [MainThread]: Command `dbt test` succeeded at 11:54:53.960182 after 2.73 seconds
+[0m11:54:53.960920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7161ef7b1ea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7161ef702440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7161582610c0>]}
+[0m11:54:53.961466 [debug] [MainThread]: Flushing usage events
+[0m11:54:54.920580 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:55:01.552758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a65f2e5e440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a65f202e800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a65f202f340>]}
+
+
+============================== 11:55:01.556795 | 99da2fc3-96d4-4e04-87db-d2999c78e60d ==============================
+[0m11:55:01.556795 [info ] [MainThread]: Running with dbt=1.9.6
+[0m11:55:01.557425 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'profiles_dir': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final', 'warn_error': 'None', 'log_path': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/logs', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'printer_width': '80', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'version_check': 'True', 'debug': 'False', 'invocation_command': 'dbt run --select path:marts/fact', 'no_print': 'None', 'static_parser': 'True', 'write_json': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'empty': 'False', 'quiet': 'False', 'indirect_selection': 'eager', 'fail_fast': 'False'}
+[0m11:55:03.246144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '99da2fc3-96d4-4e04-87db-d2999c78e60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a655793e260>]}
+[0m11:55:03.344985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '99da2fc3-96d4-4e04-87db-d2999c78e60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6557a78dc0>]}
+[0m11:55:03.346268 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:55:03.559915 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m11:55:03.711448 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:55:03.712118 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:55:03.719826 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_edits_star_db.marts.fact
+- models.dbt_edits_star_db.staging
+- models.dbt_edits_star_db.marts.dim
+[0m11:55:03.768377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '99da2fc3-96d4-4e04-87db-d2999c78e60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a655747cb50>]}
+[0m11:55:03.886216 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:55:03.889004 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:55:03.903204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '99da2fc3-96d4-4e04-87db-d2999c78e60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6557427d00>]}
+[0m11:55:03.904062 [info ] [MainThread]: Found 12 models, 11 data tests, 9 sources, 492 macros
+[0m11:55:03.904692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '99da2fc3-96d4-4e04-87db-d2999c78e60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6557427cd0>]}
+[0m11:55:03.907172 [info ] [MainThread]: 
+[0m11:55:03.907821 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:55:03.908273 [info ] [MainThread]: 
+[0m11:55:03.908978 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:55:03.910287 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_durable-ripsaw-477914-g0'
+[0m11:55:03.911001 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:55:04.397671 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_durable-ripsaw-477914-g0, now list_durable-ripsaw-477914-g0_ecommerce)
+[0m11:55:04.398376 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:55:04.767777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '99da2fc3-96d4-4e04-87db-d2999c78e60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6557aab130>]}
+[0m11:55:04.768490 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:55:04.771744 [debug] [Thread-1 (]: Began running node model.dbt_edits_star_db.fact_db_order_items
+[0m11:55:04.772376 [info ] [Thread-1 (]: 1 of 1 START sql table model ecommerce.fact_db_order_items ..................... [RUN]
+[0m11:55:04.772865 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_durable-ripsaw-477914-g0_ecommerce, now model.dbt_edits_star_db.fact_db_order_items)
+[0m11:55:04.773261 [debug] [Thread-1 (]: Began compiling node model.dbt_edits_star_db.fact_db_order_items
+[0m11:55:04.782902 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_edits_star_db.fact_db_order_items"
+[0m11:55:04.783844 [debug] [Thread-1 (]: Began executing node model.dbt_edits_star_db.fact_db_order_items
+[0m11:55:04.800479 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:55:05.212903 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_edits_star_db.fact_db_order_items"
+[0m11:55:05.214219 [debug] [Thread-1 (]: On model.dbt_edits_star_db.fact_db_order_items: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.fact_db_order_items"} */
+
+  
+    
+
+    create or replace table `durable-ripsaw-477914-g0`.`ecommerce`.`fact_db_order_items`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+select
+  oi.order_id,
+  oi.order_item_id,
+  oi.product_id,
+  oi.seller_id,
+  o.customer_id,
+  date(o.order_purchase_timestamp) as order_date_key,
+  oi.price,
+  oi.freight_value,
+  (oi.price + oi.freight_value) as gross_order_item_value
+from `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_order_items` oi
+left join `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_orders` o
+  on oi.order_id = o.order_id
+    );
+  
+[0m11:55:05.752756 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:8e98aea4-3ec4-4ea1-8be1-a81fad6de57d&page=queryresults
+[0m11:55:09.351084 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '99da2fc3-96d4-4e04-87db-d2999c78e60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6557a48430>]}
+[0m11:55:09.352459 [info ] [Thread-1 (]: 1 of 1 OK created sql table model ecommerce.fact_db_order_items ................ [[32mCREATE TABLE (112.7k rows, 21.2 MiB processed)[0m in 4.58s]
+[0m11:55:09.353393 [debug] [Thread-1 (]: Finished running node model.dbt_edits_star_db.fact_db_order_items
+[0m11:55:09.355555 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:55:09.356733 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:55:09.357181 [debug] [MainThread]: Connection 'model.dbt_edits_star_db.fact_db_order_items' was properly closed.
+[0m11:55:09.357666 [info ] [MainThread]: 
+[0m11:55:09.358157 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 5.45 seconds (5.45s).
+[0m11:55:09.359093 [debug] [MainThread]: Command end result
+[0m11:55:09.391501 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:55:09.393824 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:55:09.401478 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/run_results.json
+[0m11:55:09.402071 [info ] [MainThread]: 
+[0m11:55:09.402658 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:55:09.403105 [info ] [MainThread]: 
+[0m11:55:09.403568 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m11:55:09.404423 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.9356775, "process_in_blocks": "0", "process_kernel_time": 0.634685, "process_mem_max_rss": "265252", "process_out_blocks": "2320", "process_user_time": 7.20248}
+[0m11:55:09.405131 [debug] [MainThread]: Command `dbt run` succeeded at 11:55:09.404948 after 7.94 seconds
+[0m11:55:09.405684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a65f2e5e440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a655793e260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a65f2da85b0>]}
+[0m11:55:09.406231 [debug] [MainThread]: Flushing usage events
+[0m11:55:10.401757 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:55:14.826375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d025ca41c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d024dd13c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d024dd1360>]}
+
+
+============================== 11:55:14.829899 | 4b39c79e-813e-4cb9-86b6-bc77baea1f3f ==============================
+[0m11:55:14.829899 [info ] [MainThread]: Running with dbt=1.9.6
+[0m11:55:14.830579 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'quiet': 'False', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_path': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/logs', 'partial_parse': 'True', 'profiles_dir': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final', 'debug': 'False', 'version_check': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --select path:marts/dim', 'log_format': 'default', 'use_experimental_parser': 'False', 'introspect': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'empty': 'False', 'use_colors': 'True', 'write_json': 'True', 'target_path': 'None', 'warn_error': 'None'}
+[0m11:55:16.431493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b39c79e-813e-4cb9-86b6-bc77baea1f3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d0252de3b0>]}
+[0m11:55:16.530211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b39c79e-813e-4cb9-86b6-bc77baea1f3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77cf8aab5390>]}
+[0m11:55:16.531261 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:55:16.743419 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m11:55:16.910375 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:55:16.911119 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:55:16.920137 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_edits_star_db.marts.dim
+- models.dbt_edits_star_db.staging
+- models.dbt_edits_star_db.marts.fact
+[0m11:55:16.975088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b39c79e-813e-4cb9-86b6-bc77baea1f3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77cf8a4a6830>]}
+[0m11:55:17.089713 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:55:17.092284 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:55:17.108398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b39c79e-813e-4cb9-86b6-bc77baea1f3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77cf8a4aa5f0>]}
+[0m11:55:17.109455 [info ] [MainThread]: Found 12 models, 11 data tests, 9 sources, 492 macros
+[0m11:55:17.110070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b39c79e-813e-4cb9-86b6-bc77baea1f3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77cf8a4aae90>]}
+[0m11:55:17.112853 [info ] [MainThread]: 
+[0m11:55:17.113544 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:55:17.114021 [info ] [MainThread]: 
+[0m11:55:17.114972 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:55:17.121811 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_durable-ripsaw-477914-g0'
+[0m11:55:17.122728 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:55:17.611824 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_durable-ripsaw-477914-g0, now list_durable-ripsaw-477914-g0_ecommerce)
+[0m11:55:17.612479 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:55:17.957292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b39c79e-813e-4cb9-86b6-bc77baea1f3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77cf8aab7af0>]}
+[0m11:55:17.958013 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:55:17.962097 [debug] [Thread-1 (]: Began running node model.dbt_edits_star_db.dim_db_customers
+[0m11:55:17.962545 [debug] [Thread-2 (]: Began running node model.dbt_edits_star_db.dim_db_dates
+[0m11:55:17.963077 [debug] [Thread-3 (]: Began running node model.dbt_edits_star_db.dim_db_products
+[0m11:55:17.963846 [info ] [Thread-1 (]: 1 of 4 START sql table model ecommerce.dim_db_customers ........................ [RUN]
+[0m11:55:17.964433 [debug] [Thread-4 (]: Began running node model.dbt_edits_star_db.dim_db_sellers
+[0m11:55:17.965328 [info ] [Thread-2 (]: 2 of 4 START sql table model ecommerce.dim_db_dates ............................ [RUN]
+[0m11:55:17.965984 [info ] [Thread-3 (]: 3 of 4 START sql table model ecommerce.dim_db_products ......................... [RUN]
+[0m11:55:17.966888 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_durable-ripsaw-477914-g0_ecommerce, now model.dbt_edits_star_db.dim_db_customers)
+[0m11:55:17.967465 [info ] [Thread-4 (]: 4 of 4 START sql table model ecommerce.dim_db_sellers .......................... [RUN]
+[0m11:55:17.968197 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.dbt_edits_star_db.dim_db_dates'
+[0m11:55:17.968796 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.dbt_edits_star_db.dim_db_products'
+[0m11:55:17.969309 [debug] [Thread-1 (]: Began compiling node model.dbt_edits_star_db.dim_db_customers
+[0m11:55:17.969924 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.dbt_edits_star_db.dim_db_sellers'
+[0m11:55:17.970496 [debug] [Thread-2 (]: Began compiling node model.dbt_edits_star_db.dim_db_dates
+[0m11:55:17.970961 [debug] [Thread-3 (]: Began compiling node model.dbt_edits_star_db.dim_db_products
+[0m11:55:17.981648 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_edits_star_db.dim_db_customers"
+[0m11:55:17.982411 [debug] [Thread-4 (]: Began compiling node model.dbt_edits_star_db.dim_db_sellers
+[0m11:55:17.986990 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_edits_star_db.dim_db_dates"
+[0m11:55:17.993608 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_edits_star_db.dim_db_products"
+[0m11:55:17.998484 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_edits_star_db.dim_db_sellers"
+[0m11:55:17.999546 [debug] [Thread-1 (]: Began executing node model.dbt_edits_star_db.dim_db_customers
+[0m11:55:18.000909 [debug] [Thread-2 (]: Began executing node model.dbt_edits_star_db.dim_db_dates
+[0m11:55:18.013093 [debug] [Thread-3 (]: Began executing node model.dbt_edits_star_db.dim_db_products
+[0m11:55:18.018568 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:55:18.019593 [debug] [Thread-4 (]: Began executing node model.dbt_edits_star_db.dim_db_sellers
+[0m11:55:18.022839 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:55:18.026950 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:55:18.033290 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:55:18.413021 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_edits_star_db.dim_db_sellers"
+[0m11:55:18.414848 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_edits_star_db.dim_db_dates"
+[0m11:55:18.416832 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_edits_star_db.dim_db_products"
+[0m11:55:18.418754 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_edits_star_db.dim_db_customers"
+[0m11:55:18.424700 [debug] [Thread-2 (]: On model.dbt_edits_star_db.dim_db_dates: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.dim_db_dates"} */
+
+  
+    
+
+    create or replace table `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_dates`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with dates as (
+  select distinct
+    date(order_purchase_timestamp) as date_day
+  from `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_orders`
+)
+
+select
+  date_day as date_key,
+  extract(year from date_day)    as year,
+  extract(quarter from date_day) as quarter,
+  extract(month from date_day)   as month,
+  extract(day from date_day)     as day,
+  format_date('%Y-%m', date_day) as year_month
+from dates
+    );
+  
+[0m11:55:18.426448 [debug] [Thread-1 (]: On model.dbt_edits_star_db.dim_db_customers: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.dim_db_customers"} */
+
+  
+    
+
+    create or replace table `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_customers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+select
+  customer_id,
+  customer_unique_id,
+  customer_zip_code_prefix,
+  customer_city,
+  customer_state
+from `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_customers`
+    );
+  
+[0m11:55:18.427253 [debug] [Thread-3 (]: On model.dbt_edits_star_db.dim_db_products: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.dim_db_products"} */
+
+  
+    
+
+    create or replace table `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_products`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with products as (
+  select
+    product_id,
+    product_category_name,
+    product_weight_g,
+    product_length_cm,
+    product_height_cm,
+    product_width_cm
+  from `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_products`
+),
+cats as (
+  select
+    product_category_name,
+    product_category_name_english
+  from `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_product_category_name_translation`
+)
+
+select
+  p.product_id,
+  p.product_category_name,
+  c.product_category_name_english,
+  p.product_weight_g,
+  p.product_length_cm,
+  p.product_height_cm,
+  p.product_width_cm
+from products p
+left join cats c
+    on p.product_category_name = c.product_category_name
+    );
+  
+[0m11:55:18.430703 [debug] [Thread-4 (]: On model.dbt_edits_star_db.dim_db_sellers: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "model.dbt_edits_star_db.dim_db_sellers"} */
+
+  
+    
+
+    create or replace table `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_sellers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+select
+  seller_id,
+  seller_zip_code_prefix as seller_zip,
+  seller_city,
+  seller_state
+from `durable-ripsaw-477914-g0`.`ecommerce`.`stg_db_sellers`
+    );
+  
+[0m11:55:19.049376 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:00591628-64fc-47f8-8b12-c8a8b6c0b716&page=queryresults
+[0m11:55:19.050162 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:f7248725-5b32-4348-8fe9-66c1d982a857&page=queryresults
+[0m11:55:19.064500 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:75146950-6ecd-45f6-a651-b5d94b13dbc5&page=queryresults
+[0m11:55:19.080825 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:c60bc165-e190-4bcd-b7e2-c85eec921a75&page=queryresults
+[0m11:55:21.042106 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b39c79e-813e-4cb9-86b6-bc77baea1f3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77cf8a4a7040>]}
+[0m11:55:21.042986 [info ] [Thread-4 (]: 4 of 4 OK created sql table model ecommerce.dim_db_sellers ..................... [[32mCREATE TABLE (3.1k rows, 171.8 KiB processed)[0m in 3.07s]
+[0m11:55:21.043734 [debug] [Thread-4 (]: Finished running node model.dbt_edits_star_db.dim_db_sellers
+[0m11:55:21.531136 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b39c79e-813e-4cb9-86b6-bc77baea1f3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77cf8a4a4c40>]}
+[0m11:55:21.532429 [info ] [Thread-2 (]: 2 of 4 OK created sql table model ecommerce.dim_db_dates ....................... [[32mCREATE TABLE (634.0 rows, 2.0 MiB processed)[0m in 3.56s]
+[0m11:55:21.533223 [debug] [Thread-2 (]: Finished running node model.dbt_edits_star_db.dim_db_dates
+[0m11:55:21.541888 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b39c79e-813e-4cb9-86b6-bc77baea1f3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77cf7a75db10>]}
+[0m11:55:21.542777 [info ] [Thread-3 (]: 3 of 4 OK created sql table model ecommerce.dim_db_products .................... [[32mCREATE TABLE (33.0k rows, 2.4 MiB processed)[0m in 3.57s]
+[0m11:55:21.543513 [debug] [Thread-3 (]: Finished running node model.dbt_edits_star_db.dim_db_products
+[0m11:55:21.820845 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b39c79e-813e-4cb9-86b6-bc77baea1f3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77cf8a4a81c0>]}
+[0m11:55:21.821692 [info ] [Thread-1 (]: 1 of 4 OK created sql table model ecommerce.dim_db_customers ................... [[32mCREATE TABLE (99.4k rows, 8.6 MiB processed)[0m in 3.85s]
+[0m11:55:21.822479 [debug] [Thread-1 (]: Finished running node model.dbt_edits_star_db.dim_db_customers
+[0m11:55:21.824125 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:55:21.825112 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:55:21.825642 [debug] [MainThread]: Connection 'model.dbt_edits_star_db.dim_db_customers' was properly closed.
+[0m11:55:21.826011 [debug] [MainThread]: Connection 'model.dbt_edits_star_db.dim_db_dates' was properly closed.
+[0m11:55:21.826386 [debug] [MainThread]: Connection 'model.dbt_edits_star_db.dim_db_products' was properly closed.
+[0m11:55:21.826841 [debug] [MainThread]: Connection 'model.dbt_edits_star_db.dim_db_sellers' was properly closed.
+[0m11:55:21.827342 [info ] [MainThread]: 
+[0m11:55:21.828025 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 4.71 seconds (4.71s).
+[0m11:55:21.829607 [debug] [MainThread]: Command end result
+[0m11:55:22.058454 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:55:22.060546 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:55:22.067577 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/run_results.json
+[0m11:55:22.068338 [info ] [MainThread]: 
+[0m11:55:22.068919 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:55:22.069370 [info ] [MainThread]: 
+[0m11:55:22.069821 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m11:55:22.070519 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.3183928, "process_in_blocks": "792", "process_kernel_time": 0.620718, "process_mem_max_rss": "266612", "process_out_blocks": "2400", "process_user_time": 7.263417}
+[0m11:55:22.071050 [debug] [MainThread]: Command `dbt run` succeeded at 11:55:22.070946 after 7.32 seconds
+[0m11:55:22.071544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d025ca41c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d026908820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77cf8a5003a0>]}
+[0m11:55:22.072039 [debug] [MainThread]: Flushing usage events
+[0m11:55:23.310372 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:55:29.851981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7361520718a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x736151886590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7361513b4a90>]}
+
+
+============================== 11:55:29.857309 | 98522d13-09ab-4e6b-95ce-e65eb7baf4b8 ==============================
+[0m11:55:29.857309 [info ] [MainThread]: Running with dbt=1.9.6
+[0m11:55:29.858289 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'profiles_dir': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final', 'log_path': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/logs', 'use_colors': 'True', 'debug': 'False', 'introspect': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'empty': 'None', 'indirect_selection': 'eager', 'warn_error': 'None', 'target_path': 'None', 'fail_fast': 'False', 'invocation_command': 'dbt test --select path:marts/fact', 'use_experimental_parser': 'False', 'printer_width': '80'}
+[0m11:55:31.648320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '98522d13-09ab-4e6b-95ce-e65eb7baf4b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7360b6d44f10>]}
+[0m11:55:31.749046 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '98522d13-09ab-4e6b-95ce-e65eb7baf4b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7360b6e99a80>]}
+[0m11:55:31.750244 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:55:31.993219 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m11:55:32.185235 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:55:32.186130 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:55:32.196418 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_edits_star_db.staging
+- models.dbt_edits_star_db.marts.fact
+- models.dbt_edits_star_db.marts.dim
+[0m11:55:32.257094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '98522d13-09ab-4e6b-95ce-e65eb7baf4b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7360b6898130>]}
+[0m11:55:32.381134 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:55:32.383247 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:55:32.410442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '98522d13-09ab-4e6b-95ce-e65eb7baf4b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7360b68bd480>]}
+[0m11:55:32.411272 [info ] [MainThread]: Found 12 models, 11 data tests, 9 sources, 492 macros
+[0m11:55:32.411798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '98522d13-09ab-4e6b-95ce-e65eb7baf4b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7360b71b0280>]}
+[0m11:55:32.414263 [info ] [MainThread]: 
+[0m11:55:32.414814 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:55:32.415277 [info ] [MainThread]: 
+[0m11:55:32.416063 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:55:32.422107 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_durable-ripsaw-477914-g0_ecommerce'
+[0m11:55:32.422967 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:55:32.859850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '98522d13-09ab-4e6b-95ce-e65eb7baf4b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7361511e3b80>]}
+[0m11:55:32.860610 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:55:32.864601 [debug] [Thread-1 (]: Began running node test.dbt_edits_star_db.not_null_fact_db_order_items_customer_id.ee415a1f60
+[0m11:55:32.865346 [debug] [Thread-2 (]: Began running node test.dbt_edits_star_db.not_null_fact_db_order_items_order_id.5e4c573472
+[0m11:55:32.866145 [debug] [Thread-3 (]: Began running node test.dbt_edits_star_db.not_null_fact_db_order_items_order_item_id.53cbf172bb
+[0m11:55:32.866741 [info ] [Thread-1 (]: 1 of 3 START test not_null_fact_db_order_items_customer_id ..................... [RUN]
+[0m11:55:32.867318 [info ] [Thread-2 (]: 2 of 3 START test not_null_fact_db_order_items_order_id ........................ [RUN]
+[0m11:55:32.868081 [info ] [Thread-3 (]: 3 of 3 START test not_null_fact_db_order_items_order_item_id ................... [RUN]
+[0m11:55:32.868917 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_durable-ripsaw-477914-g0_ecommerce, now test.dbt_edits_star_db.not_null_fact_db_order_items_customer_id.ee415a1f60)
+[0m11:55:32.869659 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.dbt_edits_star_db.not_null_fact_db_order_items_order_id.5e4c573472'
+[0m11:55:32.870290 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.dbt_edits_star_db.not_null_fact_db_order_items_order_item_id.53cbf172bb'
+[0m11:55:32.870869 [debug] [Thread-1 (]: Began compiling node test.dbt_edits_star_db.not_null_fact_db_order_items_customer_id.ee415a1f60
+[0m11:55:32.871410 [debug] [Thread-2 (]: Began compiling node test.dbt_edits_star_db.not_null_fact_db_order_items_order_id.5e4c573472
+[0m11:55:32.871925 [debug] [Thread-3 (]: Began compiling node test.dbt_edits_star_db.not_null_fact_db_order_items_order_item_id.53cbf172bb
+[0m11:55:32.895171 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_edits_star_db.not_null_fact_db_order_items_customer_id.ee415a1f60"
+[0m11:55:32.901028 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_edits_star_db.not_null_fact_db_order_items_order_id.5e4c573472"
+[0m11:55:32.907041 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_edits_star_db.not_null_fact_db_order_items_order_item_id.53cbf172bb"
+[0m11:55:32.914790 [debug] [Thread-1 (]: Began executing node test.dbt_edits_star_db.not_null_fact_db_order_items_customer_id.ee415a1f60
+[0m11:55:32.921104 [debug] [Thread-3 (]: Began executing node test.dbt_edits_star_db.not_null_fact_db_order_items_order_item_id.53cbf172bb
+[0m11:55:32.921924 [debug] [Thread-2 (]: Began executing node test.dbt_edits_star_db.not_null_fact_db_order_items_order_id.5e4c573472
+[0m11:55:32.959994 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_edits_star_db.not_null_fact_db_order_items_customer_id.ee415a1f60"
+[0m11:55:32.963539 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_edits_star_db.not_null_fact_db_order_items_order_item_id.53cbf172bb"
+[0m11:55:32.967171 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_edits_star_db.not_null_fact_db_order_items_order_id.5e4c573472"
+[0m11:55:32.969011 [debug] [Thread-1 (]: On test.dbt_edits_star_db.not_null_fact_db_order_items_customer_id.ee415a1f60: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.not_null_fact_db_order_items_customer_id.ee415a1f60"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from `durable-ripsaw-477914-g0`.`ecommerce`.`fact_db_order_items`
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:32.970112 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:55:32.971454 [debug] [Thread-2 (]: On test.dbt_edits_star_db.not_null_fact_db_order_items_order_id.5e4c573472: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.not_null_fact_db_order_items_order_id.5e4c573472"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from `durable-ripsaw-477914-g0`.`ecommerce`.`fact_db_order_items`
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:32.972497 [debug] [Thread-3 (]: On test.dbt_edits_star_db.not_null_fact_db_order_items_order_item_id.53cbf172bb: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.not_null_fact_db_order_items_order_item_id.53cbf172bb"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_item_id
+from `durable-ripsaw-477914-g0`.`ecommerce`.`fact_db_order_items`
+where order_item_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:32.973321 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:55:32.974170 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:55:33.594487 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:d3791d87-71dc-40ae-894e-c5cad23a4ae3&page=queryresults
+[0m11:55:33.633601 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:20ef0e07-5c10-4824-b053-4c23dc2fd79a&page=queryresults
+[0m11:55:33.642728 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:ea486b9e-d5be-4d9c-a839-eb7f47d0c795&page=queryresults
+[0m11:55:34.536462 [info ] [Thread-3 (]: 3 of 3 PASS not_null_fact_db_order_items_order_item_id ......................... [[32mPASS[0m in 1.67s]
+[0m11:55:34.537427 [debug] [Thread-3 (]: Finished running node test.dbt_edits_star_db.not_null_fact_db_order_items_order_item_id.53cbf172bb
+[0m11:55:34.546607 [info ] [Thread-2 (]: 2 of 3 PASS not_null_fact_db_order_items_order_id .............................. [[32mPASS[0m in 1.68s]
+[0m11:55:34.548942 [debug] [Thread-2 (]: Finished running node test.dbt_edits_star_db.not_null_fact_db_order_items_order_id.5e4c573472
+[0m11:55:34.551458 [info ] [Thread-1 (]: 1 of 3 PASS not_null_fact_db_order_items_customer_id ........................... [[32mPASS[0m in 1.68s]
+[0m11:55:34.552539 [debug] [Thread-1 (]: Finished running node test.dbt_edits_star_db.not_null_fact_db_order_items_customer_id.ee415a1f60
+[0m11:55:34.554519 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:55:34.555494 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:55:34.556089 [debug] [MainThread]: Connection 'test.dbt_edits_star_db.not_null_fact_db_order_items_customer_id.ee415a1f60' was properly closed.
+[0m11:55:34.556563 [debug] [MainThread]: Connection 'test.dbt_edits_star_db.not_null_fact_db_order_items_order_id.5e4c573472' was properly closed.
+[0m11:55:34.556958 [debug] [MainThread]: Connection 'test.dbt_edits_star_db.not_null_fact_db_order_items_order_item_id.53cbf172bb' was properly closed.
+[0m11:55:34.557429 [info ] [MainThread]: 
+[0m11:55:34.557920 [info ] [MainThread]: Finished running 3 data tests in 0 hours 0 minutes and 2.14 seconds (2.14s).
+[0m11:55:34.559177 [debug] [MainThread]: Command end result
+[0m11:55:34.801191 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:55:34.804463 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:55:34.818938 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/run_results.json
+[0m11:55:34.820005 [info ] [MainThread]: 
+[0m11:55:34.821020 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:55:34.821874 [info ] [MainThread]: 
+[0m11:55:34.822746 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m11:55:34.823932 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 5.121805, "process_in_blocks": "264", "process_kernel_time": 0.551645, "process_mem_max_rss": "266736", "process_out_blocks": "2360", "process_user_time": 7.92437}
+[0m11:55:34.825179 [debug] [MainThread]: Command `dbt test` succeeded at 11:55:34.824891 after 5.12 seconds
+[0m11:55:34.826495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7361520718a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x736152d19450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7361512081f0>]}
+[0m11:55:34.827833 [debug] [MainThread]: Flushing usage events
+[0m11:55:35.865777 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:55:40.519341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c69aaa758a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c69aa28a590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c69a9bb8a90>]}
+
+
+============================== 11:55:40.522445 | 38f05127-7ed4-41d2-9bfd-af0377c1e0c4 ==============================
+[0m11:55:40.522445 [info ] [MainThread]: Running with dbt=1.9.6
+[0m11:55:40.523031 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'quiet': 'False', 'empty': 'None', 'use_colors': 'True', 'log_path': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/logs', 'introspect': 'True', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': '/home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final', 'version_check': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'target_path': 'None', 'partial_parse': 'True', 'log_cache_events': 'False', 'no_print': 'None', 'fail_fast': 'False', 'printer_width': '80', 'invocation_command': 'dbt test --select path:marts/dim', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'debug': 'False', 'send_anonymous_usage_stats': 'True'}
+[0m11:55:42.234668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '38f05127-7ed4-41d2-9bfd-af0377c1e0c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c690f524f40>]}
+[0m11:55:42.359852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '38f05127-7ed4-41d2-9bfd-af0377c1e0c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c69aa0dde40>]}
+[0m11:55:42.361474 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:55:42.629076 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m11:55:42.793222 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:55:42.793826 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:55:42.801842 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_edits_star_db.marts.dim
+- models.dbt_edits_star_db.staging
+- models.dbt_edits_star_db.marts.fact
+[0m11:55:42.853369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '38f05127-7ed4-41d2-9bfd-af0377c1e0c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c690f078130>]}
+[0m11:55:42.977702 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:55:42.981196 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:55:43.028792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '38f05127-7ed4-41d2-9bfd-af0377c1e0c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c690f09e500>]}
+[0m11:55:43.030252 [info ] [MainThread]: Found 12 models, 11 data tests, 9 sources, 492 macros
+[0m11:55:43.031458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '38f05127-7ed4-41d2-9bfd-af0377c1e0c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c69140ec250>]}
+[0m11:55:43.037370 [info ] [MainThread]: 
+[0m11:55:43.038478 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:55:43.039356 [info ] [MainThread]: 
+[0m11:55:43.040610 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:55:43.051894 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_durable-ripsaw-477914-g0_ecommerce'
+[0m11:55:43.053108 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:55:43.537961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '38f05127-7ed4-41d2-9bfd-af0377c1e0c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c690f09e3e0>]}
+[0m11:55:43.538725 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:55:43.543762 [debug] [Thread-1 (]: Began running node test.dbt_edits_star_db.not_null_dim_db_customers_customer_id.a530a90a7c
+[0m11:55:43.544576 [debug] [Thread-2 (]: Began running node test.dbt_edits_star_db.not_null_dim_db_dates_date_key.54520f5ddc
+[0m11:55:43.545223 [debug] [Thread-3 (]: Began running node test.dbt_edits_star_db.not_null_dim_db_products_product_id.c2506de247
+[0m11:55:43.545784 [debug] [Thread-4 (]: Began running node test.dbt_edits_star_db.not_null_dim_db_sellers_seller_id.3f63dbc76c
+[0m11:55:43.546412 [info ] [Thread-1 (]: 1 of 8 START test not_null_dim_db_customers_customer_id ........................ [RUN]
+[0m11:55:43.547262 [info ] [Thread-2 (]: 2 of 8 START test not_null_dim_db_dates_date_key ............................... [RUN]
+[0m11:55:43.548143 [info ] [Thread-3 (]: 3 of 8 START test not_null_dim_db_products_product_id .......................... [RUN]
+[0m11:55:43.548924 [info ] [Thread-4 (]: 4 of 8 START test not_null_dim_db_sellers_seller_id ............................ [RUN]
+[0m11:55:43.549893 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_durable-ripsaw-477914-g0_ecommerce, now test.dbt_edits_star_db.not_null_dim_db_customers_customer_id.a530a90a7c)
+[0m11:55:43.550633 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.dbt_edits_star_db.not_null_dim_db_dates_date_key.54520f5ddc'
+[0m11:55:43.551448 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.dbt_edits_star_db.not_null_dim_db_products_product_id.c2506de247'
+[0m11:55:43.552179 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.dbt_edits_star_db.not_null_dim_db_sellers_seller_id.3f63dbc76c'
+[0m11:55:43.552806 [debug] [Thread-1 (]: Began compiling node test.dbt_edits_star_db.not_null_dim_db_customers_customer_id.a530a90a7c
+[0m11:55:43.553407 [debug] [Thread-2 (]: Began compiling node test.dbt_edits_star_db.not_null_dim_db_dates_date_key.54520f5ddc
+[0m11:55:43.554049 [debug] [Thread-3 (]: Began compiling node test.dbt_edits_star_db.not_null_dim_db_products_product_id.c2506de247
+[0m11:55:43.554673 [debug] [Thread-4 (]: Began compiling node test.dbt_edits_star_db.not_null_dim_db_sellers_seller_id.3f63dbc76c
+[0m11:55:43.580166 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_edits_star_db.not_null_dim_db_customers_customer_id.a530a90a7c"
+[0m11:55:43.587346 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_edits_star_db.not_null_dim_db_dates_date_key.54520f5ddc"
+[0m11:55:43.595490 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_edits_star_db.not_null_dim_db_products_product_id.c2506de247"
+[0m11:55:43.602724 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_edits_star_db.not_null_dim_db_sellers_seller_id.3f63dbc76c"
+[0m11:55:43.604488 [debug] [Thread-1 (]: Began executing node test.dbt_edits_star_db.not_null_dim_db_customers_customer_id.a530a90a7c
+[0m11:55:43.622015 [debug] [Thread-3 (]: Began executing node test.dbt_edits_star_db.not_null_dim_db_products_product_id.c2506de247
+[0m11:55:43.628482 [debug] [Thread-2 (]: Began executing node test.dbt_edits_star_db.not_null_dim_db_dates_date_key.54520f5ddc
+[0m11:55:43.635202 [debug] [Thread-4 (]: Began executing node test.dbt_edits_star_db.not_null_dim_db_sellers_seller_id.3f63dbc76c
+[0m11:55:43.649488 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_edits_star_db.not_null_dim_db_dates_date_key.54520f5ddc"
+[0m11:55:43.655863 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_edits_star_db.not_null_dim_db_products_product_id.c2506de247"
+[0m11:55:43.655410 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_edits_star_db.not_null_dim_db_customers_customer_id.a530a90a7c"
+[0m11:55:43.660349 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_edits_star_db.not_null_dim_db_sellers_seller_id.3f63dbc76c"
+[0m11:55:43.661913 [debug] [Thread-2 (]: On test.dbt_edits_star_db.not_null_dim_db_dates_date_key.54520f5ddc: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.not_null_dim_db_dates_date_key.54520f5ddc"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_key
+from `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_dates`
+where date_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:43.662880 [debug] [Thread-3 (]: On test.dbt_edits_star_db.not_null_dim_db_products_product_id.c2506de247: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.not_null_dim_db_products_product_id.c2506de247"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_products`
+where product_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:43.663870 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:55:43.664497 [debug] [Thread-1 (]: On test.dbt_edits_star_db.not_null_dim_db_customers_customer_id.a530a90a7c: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.not_null_dim_db_customers_customer_id.a530a90a7c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_customers`
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:43.665171 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:55:43.666790 [debug] [Thread-4 (]: On test.dbt_edits_star_db.not_null_dim_db_sellers_seller_id.3f63dbc76c: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.not_null_dim_db_sellers_seller_id.3f63dbc76c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select seller_id
+from `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_sellers`
+where seller_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:43.667581 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:55:43.672355 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:55:44.297864 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:47416d2f-cc62-400f-8847-c9b1c754116c&page=queryresults
+[0m11:55:44.310337 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:f301d28d-bd5a-4602-9a46-33893493ba5f&page=queryresults
+[0m11:55:44.324672 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:d090e99a-0dd4-4bc4-921d-912c7171a858&page=queryresults
+[0m11:55:44.396169 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:bbb714b1-1cf0-48ea-b81f-f4cc10e00cb7&page=queryresults
+[0m11:55:45.212283 [info ] [Thread-1 (]: 1 of 8 PASS not_null_dim_db_customers_customer_id .............................. [[32mPASS[0m in 1.66s]
+[0m11:55:45.213264 [debug] [Thread-1 (]: Finished running node test.dbt_edits_star_db.not_null_dim_db_customers_customer_id.a530a90a7c
+[0m11:55:45.213918 [debug] [Thread-1 (]: Began running node test.dbt_edits_star_db.unique_dim_db_customers_customer_id.a5afc1c776
+[0m11:55:45.214462 [info ] [Thread-1 (]: 5 of 8 START test unique_dim_db_customers_customer_id .......................... [RUN]
+[0m11:55:45.215135 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_edits_star_db.not_null_dim_db_customers_customer_id.a530a90a7c, now test.dbt_edits_star_db.unique_dim_db_customers_customer_id.a5afc1c776)
+[0m11:55:45.215596 [debug] [Thread-1 (]: Began compiling node test.dbt_edits_star_db.unique_dim_db_customers_customer_id.a5afc1c776
+[0m11:55:45.222646 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_edits_star_db.unique_dim_db_customers_customer_id.a5afc1c776"
+[0m11:55:45.223556 [debug] [Thread-1 (]: Began executing node test.dbt_edits_star_db.unique_dim_db_customers_customer_id.a5afc1c776
+[0m11:55:45.228422 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_edits_star_db.unique_dim_db_customers_customer_id.a5afc1c776"
+[0m11:55:45.229672 [debug] [Thread-1 (]: On test.dbt_edits_star_db.unique_dim_db_customers_customer_id.a5afc1c776: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.unique_dim_db_customers_customer_id.a5afc1c776"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select customer_id as unique_field
+  from `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_customers`
+  where customer_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:45.230394 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:55:45.250049 [info ] [Thread-3 (]: 3 of 8 PASS not_null_dim_db_products_product_id ................................ [[32mPASS[0m in 1.70s]
+[0m11:55:45.252041 [info ] [Thread-4 (]: 4 of 8 PASS not_null_dim_db_sellers_seller_id .................................. [[32mPASS[0m in 1.70s]
+[0m11:55:45.252998 [debug] [Thread-3 (]: Finished running node test.dbt_edits_star_db.not_null_dim_db_products_product_id.c2506de247
+[0m11:55:45.253774 [debug] [Thread-4 (]: Finished running node test.dbt_edits_star_db.not_null_dim_db_sellers_seller_id.3f63dbc76c
+[0m11:55:45.254443 [debug] [Thread-3 (]: Began running node test.dbt_edits_star_db.unique_dim_db_dates_date_key.0cba9ad1ef
+[0m11:55:45.255233 [debug] [Thread-4 (]: Began running node test.dbt_edits_star_db.unique_dim_db_products_product_id.9422f73171
+[0m11:55:45.256121 [info ] [Thread-3 (]: 6 of 8 START test unique_dim_db_dates_date_key ................................. [RUN]
+[0m11:55:45.256855 [info ] [Thread-4 (]: 7 of 8 START test unique_dim_db_products_product_id ............................ [RUN]
+[0m11:55:45.257747 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_edits_star_db.not_null_dim_db_products_product_id.c2506de247, now test.dbt_edits_star_db.unique_dim_db_dates_date_key.0cba9ad1ef)
+[0m11:55:45.258568 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_edits_star_db.not_null_dim_db_sellers_seller_id.3f63dbc76c, now test.dbt_edits_star_db.unique_dim_db_products_product_id.9422f73171)
+[0m11:55:45.259125 [debug] [Thread-3 (]: Began compiling node test.dbt_edits_star_db.unique_dim_db_dates_date_key.0cba9ad1ef
+[0m11:55:45.259870 [debug] [Thread-4 (]: Began compiling node test.dbt_edits_star_db.unique_dim_db_products_product_id.9422f73171
+[0m11:55:45.265940 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_edits_star_db.unique_dim_db_dates_date_key.0cba9ad1ef"
+[0m11:55:45.272767 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_edits_star_db.unique_dim_db_products_product_id.9422f73171"
+[0m11:55:45.274467 [debug] [Thread-4 (]: Began executing node test.dbt_edits_star_db.unique_dim_db_products_product_id.9422f73171
+[0m11:55:45.275438 [debug] [Thread-3 (]: Began executing node test.dbt_edits_star_db.unique_dim_db_dates_date_key.0cba9ad1ef
+[0m11:55:45.279569 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_edits_star_db.unique_dim_db_products_product_id.9422f73171"
+[0m11:55:45.283234 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_edits_star_db.unique_dim_db_dates_date_key.0cba9ad1ef"
+[0m11:55:45.287314 [info ] [Thread-2 (]: 2 of 8 PASS not_null_dim_db_dates_date_key ..................................... [[32mPASS[0m in 1.74s]
+[0m11:55:45.288785 [debug] [Thread-4 (]: On test.dbt_edits_star_db.unique_dim_db_products_product_id.9422f73171: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.unique_dim_db_products_product_id.9422f73171"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select product_id as unique_field
+  from `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_products`
+  where product_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:45.289405 [debug] [Thread-3 (]: On test.dbt_edits_star_db.unique_dim_db_dates_date_key.0cba9ad1ef: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.unique_dim_db_dates_date_key.0cba9ad1ef"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select date_key as unique_field
+  from `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_dates`
+  where date_key is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:45.290285 [debug] [Thread-2 (]: Finished running node test.dbt_edits_star_db.not_null_dim_db_dates_date_key.54520f5ddc
+[0m11:55:45.291098 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:55:45.292005 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:55:45.292699 [debug] [Thread-2 (]: Began running node test.dbt_edits_star_db.unique_dim_db_sellers_seller_id.345d6e4edf
+[0m11:55:45.298010 [info ] [Thread-2 (]: 8 of 8 START test unique_dim_db_sellers_seller_id .............................. [RUN]
+[0m11:55:45.298871 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_edits_star_db.not_null_dim_db_dates_date_key.54520f5ddc, now test.dbt_edits_star_db.unique_dim_db_sellers_seller_id.345d6e4edf)
+[0m11:55:45.299464 [debug] [Thread-2 (]: Began compiling node test.dbt_edits_star_db.unique_dim_db_sellers_seller_id.345d6e4edf
+[0m11:55:45.305653 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_edits_star_db.unique_dim_db_sellers_seller_id.345d6e4edf"
+[0m11:55:45.307826 [debug] [Thread-2 (]: Began executing node test.dbt_edits_star_db.unique_dim_db_sellers_seller_id.345d6e4edf
+[0m11:55:45.313846 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_edits_star_db.unique_dim_db_sellers_seller_id.345d6e4edf"
+[0m11:55:45.314962 [debug] [Thread-2 (]: On test.dbt_edits_star_db.unique_dim_db_sellers_seller_id.345d6e4edf: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "dbt_olist", "target_name": "dev", "node_id": "test.dbt_edits_star_db.unique_dim_db_sellers_seller_id.345d6e4edf"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select seller_id as unique_field
+  from `durable-ripsaw-477914-g0`.`ecommerce`.`dim_db_sellers`
+  where seller_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:55:45.315900 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:55:45.827857 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:fc936c5e-33bb-4519-bea7-4976192862bc&page=queryresults
+[0m11:55:45.847228 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:80e919b9-039a-4fee-a963-186e2dc2152d&page=queryresults
+[0m11:55:45.877708 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:1661d2e0-5609-482c-bfad-5708313ae5ac&page=queryresults
+[0m11:55:46.120235 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=durable-ripsaw-477914-g0&j=bq:US:9aa8e46a-0989-4963-8ff4-0f5b5f7cb9c3&page=queryresults
+[0m11:55:46.708216 [info ] [Thread-1 (]: 5 of 8 PASS unique_dim_db_customers_customer_id ................................ [[32mPASS[0m in 1.49s]
+[0m11:55:46.709349 [debug] [Thread-1 (]: Finished running node test.dbt_edits_star_db.unique_dim_db_customers_customer_id.a5afc1c776
+[0m11:55:46.727999 [info ] [Thread-3 (]: 6 of 8 PASS unique_dim_db_dates_date_key ....................................... [[32mPASS[0m in 1.47s]
+[0m11:55:46.728968 [debug] [Thread-3 (]: Finished running node test.dbt_edits_star_db.unique_dim_db_dates_date_key.0cba9ad1ef
+[0m11:55:46.778125 [info ] [Thread-4 (]: 7 of 8 PASS unique_dim_db_products_product_id .................................. [[32mPASS[0m in 1.52s]
+[0m11:55:46.778917 [debug] [Thread-4 (]: Finished running node test.dbt_edits_star_db.unique_dim_db_products_product_id.9422f73171
+[0m11:55:47.059203 [info ] [Thread-2 (]: 8 of 8 PASS unique_dim_db_sellers_seller_id .................................... [[32mPASS[0m in 1.76s]
+[0m11:55:47.060003 [debug] [Thread-2 (]: Finished running node test.dbt_edits_star_db.unique_dim_db_sellers_seller_id.345d6e4edf
+[0m11:55:47.061621 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:55:47.062252 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:55:47.062563 [debug] [MainThread]: Connection 'test.dbt_edits_star_db.unique_dim_db_customers_customer_id.a5afc1c776' was properly closed.
+[0m11:55:47.062875 [debug] [MainThread]: Connection 'test.dbt_edits_star_db.unique_dim_db_sellers_seller_id.345d6e4edf' was properly closed.
+[0m11:55:47.063167 [debug] [MainThread]: Connection 'test.dbt_edits_star_db.unique_dim_db_dates_date_key.0cba9ad1ef' was properly closed.
+[0m11:55:47.063446 [debug] [MainThread]: Connection 'test.dbt_edits_star_db.unique_dim_db_products_product_id.9422f73171' was properly closed.
+[0m11:55:47.063873 [info ] [MainThread]: 
+[0m11:55:47.064223 [info ] [MainThread]: Finished running 8 data tests in 0 hours 0 minutes and 4.02 seconds (4.02s).
+[0m11:55:47.065751 [debug] [MainThread]: Command end result
+[0m11:55:47.102518 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/manifest.json
+[0m11:55:47.105248 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/semantic_manifest.json
+[0m11:55:47.114073 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/pingh/Brazilian-E-Commerce-Public-Dataset-by-Olist/Dbt_Final/target/run_results.json
+[0m11:55:47.114664 [info ] [MainThread]: 
+[0m11:55:47.115216 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:55:47.115710 [info ] [MainThread]: 
+[0m11:55:47.116175 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m11:55:47.116980 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 6.677595, "process_in_blocks": "264", "process_kernel_time": 0.753117, "process_mem_max_rss": "267296", "process_out_blocks": "2488", "process_user_time": 7.691417}
+[0m11:55:47.117583 [debug] [MainThread]: Command `dbt test` succeeded at 11:55:47.117450 after 6.68 seconds
+[0m11:55:47.118071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c69aaa758a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c69abe30d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c690f09e500>]}
+[0m11:55:47.118555 [debug] [MainThread]: Flushing usage events
+[0m11:55:48.209318 [debug] [MainThread]: An error was encountered while trying to flush usage events
