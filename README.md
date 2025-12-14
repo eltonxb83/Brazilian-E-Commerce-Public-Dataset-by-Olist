@@ -1,5 +1,5 @@
 
-# Brazilian E-Commerce (Olist) End-to-End Data Platform  
+# Brazilian E-Commerce (Olist) End-to-End Data Pipeline  
 ### Meltano → BigQuery → dbt (Staging + Star Schema) → Great Expectations → ML → HTML Dashboard → Dagster Orchestration
 
 ![Dashboard Flowchart](https://github.com/pinghar/Brazilian-E-Commerce-Public-Dataset-by-Olist/blob/main/FlowChart.png)
@@ -14,8 +14,8 @@ project_root/
 - meltano_kaggle_csv/
 - Dbt_Final/
 - GX/
-- dagster_pipeline/
-- ml/
+- dagster_proj/
+- EDA_ML/
 - index.html
 - README.md
 
@@ -25,18 +25,16 @@ git clone https://github.com/pinghar/Brazilian-E-Commerce-Public-Dataset-by-Olis
 cd Brazilian-E-Commerce-Public-Dataset-by-Olist
 
 Create environment:
-conda create -n eltn
+conda env create -f eltn_environment.yml
 conda activate eltn
 
 ## 4. Configure .env
-KAGGLE_USERNAME=your_kaggle_username
-KAGGLE_KEY=your_kaggle_api_key
-GCP_PROJECT_ID=your_gcp_project_id
-GOOGLE_APPLICATION_CREDENTIALS=/full/path/to/your-service-account.json
-BQ_DATASET=ecommerce
-BQ_LOCATION=US
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_API_KEY=your_google_api_key
+KAGGLE_USERNAME="your_kaggle_username"
+KAGGLE_KEY="your_kaggle_api_key"
+GITHUB_TOKEN="ghp-xxxx"
+GCP_PROJECT_ID="your_gcp_project_id"
+GOOGLE_APPLICATION_CREDENTIALS="/full/path/to/your-service-account.json"
+WEB_CLIENT_ID="your_google_client_id"
 
 ## 5. .gitignore
 .env
@@ -57,7 +55,7 @@ cd ./Dbt_Final/
 # 1. Connection Check
 dbt debug
 
-# 2. Install Packages
+# 2. Install Packages (First Time only)
 dbt deps
 
 # 3. Staging Layer
@@ -79,28 +77,24 @@ dbt build --full-refresh
 python GX/GX_Validation_Report.py
 
 ## 9. EDA & Machine Learning
-python ml/EDA_ML_Analysis.py
+python EDA_ML/EDA_ML.py
 
 ## 10. Dashboard
 [View Live Dashboard](https://pinghar.github.io/Brazilian-E-Commerce-Public-Dataset-by-Olist/).
 
 ## 11. Dagster Orchestration
-cd dagster/
-dagster dev -m dagster_proj.definitions → open http://localhost:3000 to run full pipeline.
+# For who execute Dagster for the first time
 
-## For who execute Dagster for the first time
+# 1. go to your project root folder
+cd ~/Brazilian-E-Commerce-Public-Dataset-by-Olist
 
-
-## 1. go to your project root folder
-cd ~/GroupProject_Brazilian-E-Commerce-Public-Dataset-by-Olist
-
-## 2. install dagster into your existing eltn env
+# 2. install dagster into your existing eltn env
 conda env update -f eltn_environment.yml
 
-## 3. ensure all *.py files executable
+# 3. ensure all *.py files executable
 chmod 755 Dbt_Final/*.py GX/*.py EDA_ML/*.py
 
-## 4. launch dagster dashboard under your project root folder
+# 4. launch dagster dashboard under your project root folder
 dagster dev -m dagster_proj.definitions
 
 ## 12. Architecture Overview
