@@ -2,7 +2,7 @@
 # Brazilian E-Commerce (Olist) End-to-End Data Pipeline  
 ### Meltano → BigQuery → dbt (Staging + Star Schema) → Great Expectations → ML → HTML Dashboard → Dagster Orchestration
 
-![Dashboard Flowchart](https://github.com/pinghar/Brazilian-E-Commerce-Public-Dataset-by-Olist/blob/main/images/factoryfloor_flowchart.png)
+![Dashboard Flowchart](https://github.com/pinghar/Brazilian-E-Commerce-Public-Dataset-by-Olist/blob/main/images/FlowChart.png)
 
 ## 1. Project Overview
 This repository implements a full modern data pipeline for the Brazilian E-Commerce Public Dataset (Olist):
